@@ -1,0 +1,28 @@
+<form name="form2" class="panel panel-primary"
+    ng-controller="View2Ctrl as $ctrl"
+    ng-submit="$ctrl.submit()">
+    <!--...-->
+    <div class="form-group"
+        ng-class="{'has-error': form2.name.$touched && form2.name.$invalid}">
+        <label for="name2">Name:</label>
+        <input id="name2" name="name" type="text" class="form-control" placeholder="required, latin letters only"
+            required
+            ng-model="$ctrl.name"
+            ng-pattern="/^[a-zA-Z]+$/">
+    </div>
+    <!--...-->
+    <div class="form-group"
+        ng-class="{'has-error': form2.pass.$touched && form2.pass.$invalid}">
+        <label for="pass2">Password:</label>
+        <input id="pass2" name="pass" type="password" class="form-control" placeholder="required, longer than 4 chars"
+            required
+            ng-model="$ctrl.pass"
+            ng-minlength="4">
+    </div>
+    <!--...-->
+    <button type="submit" class="btn btn-primary pull-right"
+        ng-disabled="form2.$invalid">
+        Submit
+    </button>
+    <!--...-->
+</form>
