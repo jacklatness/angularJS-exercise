@@ -4,15 +4,11 @@
         ng-required="true" limit-to="13" ng-maxlength="13" canada-phone /> 
     <br />
     <span class="error" ng-show="form1.phoneNumber.$touched && form1.phoneNumber.$error.required">
-        This field is required.
+        Phone Number is required.
         <br />
     </span>
     <span class="error" ng-show="form1.phoneNumber.$touched && 10 > length">
         It only contains {{ length }} numbers.
-        <br />
-    </span>
-    <span class="error" ng-show="form1.phoneNumber.$touched && form1.phoneNumber.$error.maxlength">
-        Please input 10 numbers only.
         <br />
     </span>
     <br />

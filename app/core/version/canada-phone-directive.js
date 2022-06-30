@@ -9,7 +9,7 @@ angular.module('myApp.version.canada-phone-directive', [])
         link: function(scope, elem, attrs, ctrl, ngModel) {
             angular.element(elem).on('keyup', function(e) { 
                 // This will remove characters that are not numbers
-                var numVal = elem.val().replace(/[^\w\s]/gi, '');
+                var numVal = elem.val().replace(/\D/g, '');
 
                 //This will remove white spaces and returns the input 
                 //into an array using the indexes as a regular expression 
