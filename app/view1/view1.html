@@ -1,20 +1,22 @@
-<form name="form1" class="panel panel-primary" novalidate>
-    <label for="phoneNumber">Phone Number: </label> <br />
-    <input type="text" id="phoneNumber" name="phoneNumber" ng-model="phoneNumber"
-        ng-required="true" limit-to="13" ng-maxlength="13" canada-phone /> 
-    <br />
-    <span class="error" ng-show="form1.phoneNumber.$touched && form1.phoneNumber.$error.required">
-        Phone Number is required.
+<div class="center">
+    <form name="form1" class="panel panel-primary" novalidate>
+        <label for="phoneNumber">Phone Number: </label> <br />
+        <input type="text" id="phoneNumber" name="phoneNumber" ng-model="phoneNumber"
+            ng-required="true" limit-to="13" ng-maxlength="13" canada-phone /> 
         <br />
-    </span>
-    <span class="error" ng-show="form1.phoneNumber.$touched && 10 > length">
-        It only contains {{ length }} numbers.
+        <span class="error" ng-show="form1.phoneNumber.$touched && form1.phoneNumber.$error.required">
+            Phone Number is required.
+            <br />
+        </span>
+        <span class="error" ng-show="form1.phoneNumber.$touched && 10 > length">
+            It only contains {{ length }} numbers.
+            <br />
+        </span>
         <br />
-    </span>
-    <br />
-    <input type="submit" value="Submit" ng-disabled="form1.$invalid || 10 > length" ng-click="submit()"/>
-    <br />
-    <span> Phone Number: {{phoneNumber}} </span> 
-    <br />
-    <span> Saved Value: {{formattedNumber}} </span> 
-</form>
+        <input type="submit" value="Submit" ng-disabled="form1.$invalid || 10 > length" ng-click="submit()"/>
+        <br />
+        <span> Phone Number: {{phoneNumber}} </span> 
+        <br />
+        <span> Saved Value: {{formattedNumber}} </span> 
+    </form>
+</div>
