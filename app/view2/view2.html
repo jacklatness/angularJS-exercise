@@ -2,24 +2,27 @@
     <button ng-click="performQ()">Perform $q</button>
     <button ng-click="performPromise()">Perform Promise</button>
     <button ng-click="refresh()">Refresh</button>
-    
-    <span ng-if="showOldData" ng-repeat="result in oldData">
-        <p>Name: {{ result.name }}</p>
-        <p>User Name: {{ result.username }}</p>
-        <p>Email: {{ result.email }}</p>
-        <p>City: {{ result.city }}</p>
-        <p>Phone: {{ result.phone }}</p>
-        <p>Website: {{ result.website }}</p>
-        <br>
-    </span>
 
-    <span ng-if="showNewData" ng-repeat="result in newData">
-        <p>Name: {{ result.name }}</p>
-        <p>User Name: {{ result.username }}</p>
-        <p>Email: {{ result.email }}</p>
-        <p>City: {{ result.city }}</p>
-        <p>Phone: {{ result.phone }}</p>
-        <p>Website: {{ result.website }}</p>
-        <br>
-    </span>
+    <div ng-if="showOldData" ng-repeat="result in oldData">
+        <ul>
+            <li>Name: {{ result.name }}</li>
+            <li>User Name: {{ result.username }}</li>
+            <li>Email: {{ result.email }}</li>
+            <li>City: {{ result.city }}</li>
+            <li>Phone: {{ result.phone }}</li>
+            <li>Website: {{ result.website }}</li>
+        </ul>
+    </div>
+
+    <p ng-if="showNewData">The data has been updated!</p>
+    <div ng-if="showNewData" ng-repeat="result in newData">
+        <ul>
+            <li>Name: {{ result.name }}</li>
+            <li>User Name: {{ result.username }}</li>
+            <li>Email: {{ result.email }}</li>
+            <li>City: {{ result.city }}</li>
+            <li>Phone: {{ result.phone }}</li>
+            <li>Website: {{ result.website }}</li>
+        </ul>
+    </div>
 </div>

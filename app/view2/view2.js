@@ -43,18 +43,38 @@
       });
 
       $scope.performQ = function () {
-        // var deferred = $q.defer();
+        let promise = $q((resolve, reject) => {
 
-        // $http.delete(resource.url, $scope.formData)
-        //   .then(function (response) {
-        //     $scope.submitting = true;
-        //     $scope.result = response.data;
-        //   }).catch(function(error) {
-        //     $scope.result = error;
-        //   }).finally(function() {
-        //     $scope.submitting = false;
-        //   });
+          angular.forEach($scope.scheduledForDeletion, function (user) {
+            let deleteUrl = resource.url + user.id;
 
+            $http.delete(deleteUrl)
+            .then(function (response) {
+              resolve('success');
+              console.log(response);
+            }, function (error) {
+              reject('error');
+              console.log(error);
+            });
+          });
+        });
+        
+        $scope.newData = [];
+
+        promise.then(data => {
+          if (data === 'success') {
+            angular.forEach($scope.scheduledForUpdate, function (user) {
+              $http.post(resource.url, user)
+              .then(function (response) {
+                $scope.showOldData = false;
+                $scope.showNewData = true;
+                $scope.newData.push(response.data);
+              }, function (error) {
+                console.log(error);
+              });
+            });
+          }
+        });
       };
 
       $scope.performPromise = function () {
@@ -66,7 +86,7 @@
             $http.delete(deleteUrl)
             .then(function (response) {
               resolve('success');
-              //$scope.results = response.data;
+              console.log(response);
             }, function (error) {
               reject('error');
               console.log(error);
