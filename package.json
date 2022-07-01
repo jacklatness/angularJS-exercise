@@ -6,8 +6,10 @@
   "repository": "https://github.com/angular/angular-seed",
   "license": "MIT",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.30",
     "angular": "^1.6.10",
     "angular-loader": "^1.7.5",
+    "angular-resource": "^1.8.3",
     "angular-route": "^1.7.5",
     "html5-boilerplate": "0.0.1"
   },
@@ -20,6 +22,7 @@
     "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.2",
+    "mocha": "^10.0.0",
     "protractor": "^5.4.1"
   },
   "scripts": {
