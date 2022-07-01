@@ -6,7 +6,7 @@
 
     .factory('User', [ '$http', function($resource) {   
         
-        var factory = {
+        var user = {
             getAllUsers: getAllUsers,
             getUser: getUser
         };
@@ -25,6 +25,6 @@
             });
         }
 
-        return factory;
+        return user;
     } ]);
 })();

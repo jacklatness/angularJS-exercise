@@ -74,6 +74,26 @@
     },
     {
       "id": 9,
+      "name": "Reichert Glenna",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "city": "Bartholomebury",
+      "phone": "(775)976-6794 x41206",
+      "website": "conrad.com"
+    },
+    {
+      "id": 10,
+      "name": "DuBuque Clementina",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "city": "Lebsackbury",
+      "phone": "024-648-3804",
+      "website": "ambrose.net"
+    }
+  ],
+  "delete": [
+    {
+      "id": 9,
       "name": "Glenna Reichert",
       "username": "Delphine",
       "email": "Chaim_McDermott@dana.io",
@@ -84,6 +104,26 @@
     {
       "id": 10,
       "name": "Clementina DuBuque",
+      "username": "Moriah.Stanton",
+      "email": "Rey.Padberg@karina.biz",
+      "city": "Lebsackbury",
+      "phone": "024-648-3804",
+      "website": "ambrose.net"
+    }
+  ],
+  "update": [
+    {
+      "id": 9,
+      "name": "Reichert Glenna",
+      "username": "Delphine",
+      "email": "Chaim_McDermott@dana.io",
+      "city": "Bartholomebury",
+      "phone": "(775)976-6794 x41206",
+      "website": "conrad.com"
+    },
+    {
+      "id": 10,
+      "name": "DuBuque Clementina",
       "username": "Moriah.Stanton",
       "email": "Rey.Padberg@karina.biz",
       "city": "Lebsackbury",
